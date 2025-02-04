@@ -84,30 +84,21 @@
           Your browser does not support the canvas element.
         </canvas>
         <script>
-          // Get the canvas element
           const canvas = document.getElementById('myCanvas');
           const ctx = canvas.getContext('2d');
-
-          // Set fill and stroke styles
           ctx.fillStyle = '#FF0000';
           ctx.strokeStyle = '#000000';
-
-          // Draw a rectangle
           ctx.fillRect(50, 50, 100, 100);
-
-          // Draw a circle
           ctx.beginPath();
           ctx.arc(250, 100, 50, 0, 2 * Math.PI);
           ctx.fill();
           ctx.stroke();
-
-          // Add some text
           ctx.fillStyle = '#000000';
           ctx.font = '20px Arial';
           ctx.fillText('My Canvas Drawing', 130, 180);
         </script>
       </section>
-      <section><h3>Einsteins Formuls</h3>
+      <section><h3>Einsteins Formula</h3>
         <math xmlns="http://www.w3.org/1998/Math/MathML">
           <mrow>
               <mi>E</mi>
@@ -119,6 +110,14 @@
               </msup>
           </mrow>
       </math></section>
+      <section><h3>Search example </h3>
+        <search>
+          <form action="https://httpbin.org/anything">
+            <label for="searcb">Find a Movie</label>
+            <input type="search" id="search" name="q" />
+            <button type="submit">Search</button>
+          </form>
+        </search></section>
     </main>
 
     <footer>
