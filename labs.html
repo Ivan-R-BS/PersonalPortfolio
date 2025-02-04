@@ -38,16 +38,22 @@
         <h3>Hello World</h3>
         <hello-world></hello-world>
         <p>Inspect the document then go into the console to see To see my custom <code>hello-world</code> tag in action</p>
-      <p>This is the code I used to run it <pre><code> place the HTML code here </code> </pre></p>
+      <p>This is the code I used to run it </p> <pre><code> class HelloWorld extends HTMLElement {
+        constructor() {
+            super();
+            console.log("Hello World!");
+        }
+    }
+    
+    customElements.define('hello-world', HelloWorld); </code> </pre>
       </section>
-      <section>
         <figure>
           <figcaption>Listen to the T-Rex:</figcaption>
           <audio controls src="/audio/trex.mp3"></audio>
           <a href="/audio/trex.mp3"> Download audio </a>
         </figure>
         
-      </section>
+      
       <section>
         <h3>SVG Drawing</h3>
         <svg width="400" height="200" viewBox="0 0 400 200">
