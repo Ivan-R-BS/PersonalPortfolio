@@ -6,7 +6,19 @@
     <meta name="description" content="Personal Portfolio" />
     <title>Personal Portfolio</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
-    <script></script>
+    <script>
+      class HelloWorld extends HTMLElement {
+          constructor() {
+              super();
+              // When the element is created, log to console
+              console.log("Hello World!");
+          }
+      }
+      
+      // Register the custom element with the browser
+      customElements.define('hello-world', HelloWorld);
+      </script>
+      <noscript>Your browser does not support JavaScript!</noscript>
   </head>
 
   <body>
@@ -27,8 +39,69 @@
     <main>
       <section>
         <h3>Hello World</h3>
-        <p>press the <button>Hello World</button> To see my custom <code>hello-world</code> tag in action</p>
+        <hello-world></hello-world>
+        <p>Inspect the document then go into the console to see To see my custom <code>hello-world</code> tag in action</p>
       <p>This is the code I used to run it <pre><code> place the HTML code here </code> </pre></p>
+      </section>
+      <section>
+        <figure>
+          <figcaption>Listen to the T-Rex:</figcaption>
+          <audio controls src="/audio/trex.mp3"></audio>
+          <a href="/audio/trex.mp3"> Download audio </a>
+        </figure>
+        
+      </section>
+      <section>
+        <h3>SVG Drawing</h3>
+        <svg width="400" height="200" viewBox="0 0 400 200">
+          <!-- Rectangle with gradient -->
+          <defs>
+            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+              <stop offset="100%" style="stop-color:rgb(0,0,255);stop-opacity:1" />
+            </linearGradient>
+          </defs>
+          
+          <!-- Background rectangle -->
+          <rect width="400" height="200" fill="url(#gradient)" />
+          
+          <!-- Circle -->
+          <circle cx="200" cy="100" r="50" fill="yellow" stroke="black" stroke-width="2"/>
+          
+          <!-- Text -->
+          <text x="150" y="180" fill="white" font-family="Arial" font-size="20">
+            My SVG Drawing
+          </text>
+        </svg>
+      </section>
+      <section>
+        <h3>Canvas Drawing</h3>
+        <canvas id="myCanvas" width="400" height="200" style="border:1px solid #000;">
+          Your browser does not support the canvas element.
+        </canvas>
+        <script>
+          // Get the canvas element
+          const canvas = document.getElementById('myCanvas');
+          const ctx = canvas.getContext('2d');
+
+          // Set fill and stroke styles
+          ctx.fillStyle = '#FF0000';
+          ctx.strokeStyle = '#000000';
+
+          // Draw a rectangle
+          ctx.fillRect(50, 50, 100, 100);
+
+          // Draw a circle
+          ctx.beginPath();
+          ctx.arc(250, 100, 50, 0, 2 * Math.PI);
+          ctx.fill();
+          ctx.stroke();
+
+          // Add some text
+          ctx.fillStyle = '#000000';
+          ctx.font = '20px Arial';
+          ctx.fillText('My Canvas Drawing', 130, 180);
+        </script>
       </section>
     </main>
 <br />

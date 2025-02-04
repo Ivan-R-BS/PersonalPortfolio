@@ -6,7 +6,15 @@
     <meta name="description" content="Personal Portfolio" />
     <title>Personal Portfolio</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
-    <script></script>
+    <style>
+      pre-next[l-r="left"] {
+        float: left;
+      }
+
+      pre-next[l-r="right"] {
+        float: right;
+      }
+    </style>
   </head>
 
   <body>
@@ -34,21 +42,36 @@
           Worked on getting an <strong><em>arduino-based</em></strong> car to
           follow a line using sensors and programming
         </p>
-        <img
-          src="images/arduinocar.webp"
-          alt="Arduino based 3d Printed car chassis"
-        />
+        <figure>
+          <img
+            src="images/arduinocar.webp"
+            alt="Arduino based 3d Printed car chassis"
+          />
+          <figcaption>Line Follower</figcaption>
+        </figure>
+
         <aside>
           <p>not my image.</p>
         </aside>
+      </section>
+      <section>
+        <h3>Website</h3>
+        <p>Worked on a team to make a react based website</p>
+        <video controls width="250">
+          <source src="/video/react.mp4" type="video/mp4" />
+
+          Download the
+          <a href="/video/react.mp4">MP4</a>
+          video.
+        </video>
       </section>
     </main>
 
     <footer>
       <hr />
       <div>
-        <p>pre next</p>
-        <p></p>
+        <pre-next l-r="left"><a href="./index.html"> Previous</a></pre-next>
+        <pre-next l-r="right"><a href="./contact.html"> Next</a></pre-next>
         <p>💯This page was made with &hearts; by Ivan Binet Sanchez 💯</p>
       </div>
     </footer>
