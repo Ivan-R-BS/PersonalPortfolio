@@ -1,0 +1,6 @@
+pre-next[l-r="left"] {
+    float: left;
+  }
+  pre-next[l-r="right"] {
+    float: right;
+  }
